@@ -18,7 +18,7 @@ class MainViewModel : ViewModel() {
 
 
     private fun fetchCategories(){
-        viewModelScope.launch {
+        viewModelScope.launch {  // Async execution block
             try {
                 val response = recipeService.getCategories()
                 _categorieState.value = _categorieState.value.copy(
